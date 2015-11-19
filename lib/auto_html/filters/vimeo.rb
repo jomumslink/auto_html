@@ -1,5 +1,5 @@
 AutoHtml.add_filter(:vimeo).with(:width => 440, :height => 248, :show_title => false, :show_byline => false, :show_portrait => false, :allow_fullscreen => false) do |text, options|
-  regex = /https?:\/\/(www.)?vimeo\.com\/([A-Za-z0-9._%-]*)\/(\S+)/
+  regex = /https?:\/\/(www.)?vimeo\.com\/(\S+)/
   text.gsub(regex) do
     id_match = $&.match(/\/([0-9]+)/)
     vimeo_id = id_match && id_match[1]
