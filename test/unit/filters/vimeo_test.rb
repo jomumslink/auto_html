@@ -47,4 +47,8 @@ class VimeoTest < Minitest::Test
     assert_equal '<div class="video vimeo"><iframe src="//player.vimeo.com/video/3300155?title=0&byline=0&portrait=0" width="440" height="248" frameborder="0"></iframe></div>', result
   end
 
+  def test_transform_crazy_url
+    result = auto_html('https://vimeo.com/channels/staffpicks/3300155') { vimeo }
+    assert_equal '<div class="video vimeo"><iframe src="//player.vimeo.com/video/3300155?title=0&byline=0&portrait=0" width="440" height="248" frameborder="0"></iframe></div>', result
+  end
 end
