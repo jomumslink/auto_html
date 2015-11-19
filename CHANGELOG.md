@@ -1,3 +1,6 @@
+## 1.6.5, not released
+* Improved Vimeo parsing
+
 ## 1.6.4, released 2014-04-11
 * New filter: youtube image filter 
 
